@@ -180,7 +180,7 @@
 										"userProperties": [],
 										"typeProperties": {
 											"dataset": {
-												"referenceName": "last_cdc_val",
+												"referenceName": "writenewcdcval",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
@@ -259,7 +259,7 @@
 													{
 														"name": "cdc",
 														"value": {
-															"value": "@activity('max_cdc_val').output.resultSets[0].rows[0].cdc",
+															"value": "@{activity('max_cdc_val').output.resultSets[0].rows[0].cdc}",
 															"type": "Expression"
 														}
 													}
@@ -286,26 +286,23 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "last_cdc_val",
+												"referenceName": "writenewcdcval",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": {
-														"value": "@{item().table_cdc}",
-														"type": "Expression"
-													},
+													"folder": "@{item().table}_cdc",
 													"file": "empty.json"
 												}
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "last_cdc_val",
+												"referenceName": "writenewcdcval",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
 													"folder": {
-														"value": "@{ item().table_cdc }",
+														"value": "@{item().table}_cdc",
 														"type": "Expression"
 													},
 													"file": "cdc.json"
