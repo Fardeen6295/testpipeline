@@ -286,25 +286,25 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "writenewcdcval",
+												"referenceName": "last_cdc_val",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": "@{item().table}_cdc",
+													"folder": {
+														"value": "@item().table_cdc",
+														"type": "Expression"
+													},
 													"file": "empty.json"
 												}
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "writenewcdcval",
+												"referenceName": "last_cdc_val",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": {
-														"value": "@{item().table}_cdc",
-														"type": "Expression"
-													},
+													"folder": "@item().table_cdc",
 													"file": "cdc.json"
 												}
 											}
