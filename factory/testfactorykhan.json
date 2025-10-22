@@ -1,0 +1,9 @@
+{
+	"name": "testfactorykhan",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0eeee22d-045a-4fb8-81f6-19c40f8458eb",
+		"tenantId": "cb4ccde7-35c4-4c31-b8f9-f58f24695e12"
+	}
+}
