@@ -117,7 +117,7 @@
 									}
 								},
 								"dataset": {
-									"referenceName": "last_cdc_val",
+									"referenceName": "writenewcdcval",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
@@ -286,25 +286,22 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "last_cdc_val",
+												"referenceName": "writenewcdcval",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": {
-														"value": "@item().table_cdc",
-														"type": "Expression"
-													},
+													"folder": "@{item().table}_cdc",
 													"file": "empty.json"
 												}
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "last_cdc_val",
+												"referenceName": "writenewcdcval",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": "@item().table_cdc",
+													"folder": "@{item().table}_cdc",
 													"file": "cdc.json"
 												}
 											}
