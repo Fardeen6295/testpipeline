@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testfactorykhan"
+		},
+		"SqlSpotifydata_password": {
+			"value": ""
+		},
+		"datalake_accountKey": {
+			"value": ""
+		},
+		"SqlSpotifydata_properties_typeProperties_server": {
+			"value": "azurexspotifyproject.database.windows.net"
+		},
+		"SqlSpotifydata_properties_typeProperties_database": {
+			"value": "azureprojectdbkhan"
+		},
+		"SqlSpotifydata_properties_typeProperties_userName": {
+			"value": "adminkhan"
+		},
+		"datalake_properties_typeProperties_url": {
+			"value": "https://testlakekhan.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
